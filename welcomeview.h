@@ -15,6 +15,19 @@ public:
     explicit WelcomeView(QWidget *parent = nullptr);
     ~WelcomeView();
 
+private slots:
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
+
+signals:
+    void doctorBtnClicked();
+    void departmentBtnClicked();
+    void patientBtnClicked();
+
 private:
     Ui::WelcomeView *ui;
 };

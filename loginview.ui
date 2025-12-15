@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>432</width>
-    <height>257</height>
+    <width>750</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,6 +31,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>欢迎使用诊疗测试系统</string>
        </property>
@@ -46,8 +51,8 @@
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>20</width>
-         <height>10</height>
+         <width>10</width>
+         <height>0</height>
         </size>
        </property>
       </spacer>
@@ -73,8 +78,16 @@
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
             <layout class="QFormLayout" name="formLayout">
+             <property name="bottomMargin">
+              <number>20</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>用户名：</string>
                </property>
@@ -82,16 +95,51 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="label_3">
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>密码：</string>
                </property>
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QLineEdit" name="inputUserPassword"/>
+              <widget class="QLineEdit" name="inputUserPassword">
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+              </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QLineEdit" name="inputUserName"/>
+              <widget class="QLineEdit" name="inputUserName">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="sizeIncrement">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="baseSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
@@ -103,6 +151,11 @@
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
               <widget class="QPushButton" name="pushButton">
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>注册</string>
                </property>
@@ -110,6 +163,11 @@
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_2">
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
                <property name="text">
                 <string>登录</string>
                </property>

@@ -1,6 +1,6 @@
 #include "loginview.h"
 #include "ui_loginview.h"
-
+#include "idatabase.h"
 LoginView::LoginView(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::LoginView)
@@ -15,6 +15,9 @@ LoginView::~LoginView()
 
 void LoginView::on_pushButton_2_clicked()
 {
-    emit loginSuccess();
+    QString status = IDatabase::getInstance().userLogin(ui->inputUserName->text(),ui->inputUserPassword->text());
+
+    if(status == "loginOK")
+        emit loginSuccess();
 }
 
