@@ -24,7 +24,15 @@ private:
 
     QSqlDatabase database;
     void ininDatabase();
+
+
 signals:
+
+public:
+    bool initPatientModel();
+    QSqlTableModel *patientTabModel;
+    QItemSelectionModel *thePatientSelection;
+
 };
 
 #endif // IDATABASE_H

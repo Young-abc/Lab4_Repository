@@ -2,7 +2,7 @@
 #define PATIENTVIEW_H
 
 #include <QWidget>
-
+#include <QDataWidgetMapper>
 namespace Ui {
 class PatientView;
 }
@@ -23,6 +23,7 @@ signals:
 
 private:
     Ui::PatientView *ui;
+    QDataWidgetMapper *dataMapper;
 };
 
 #endif // PATIENTVIEW_H
