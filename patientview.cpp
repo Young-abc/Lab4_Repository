@@ -29,3 +29,22 @@ void PatientView::on_btAdd_clicked()
     emit goPatienEditView();
 }
 
+
+void PatientView::on_btSearch_clicked()
+{
+    QString filter = QString("name like '%%1%'").arg(ui->txtSearch->text());
+    IDatabase::getInstance().searchPatient(filter);
+}
+
+
+void PatientView::on_btDelete_clicked()
+{
+    IDatabase::getInstance().deleteCurrentPatien();
+}
+
+
+void PatientView::on_btEdit_clicked()
+{
+
+}
+
