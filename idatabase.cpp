@@ -1,6 +1,6 @@
 #include "idatabase.h"
-
-
+#include <QUuid>
+#include <QDateTime>
 
 void IDatabase::ininDatabase()
 {
@@ -29,6 +29,22 @@ bool IDatabase::initPatientModel()
 
 }
 
+//添加
+int IDatabase::addNewPatient()
+{
+    patientTabModel->insertRow(patientTabModel->rowCount(), QModelIndex());//在末尾添加一个记录
+    QModelIndex curIndex = patientTabModel->index(patientTabModel->rowCount() - 1, 1); //创建最后一行的ModelIndex
+
+    int curRecNo = curIndex.row();
+    QSqlRecord curRec =patientTabModel->record(curRecNo);
+    curRec.setValue("CREATEDTIMESTAMP",QDateTime::currentDateTime().toString("yyyy-MM-dd"));
+    curRec.setValue("ID",QUuid::createUuid().toString(QUuid::WithoutBraces));
+
+    patientTabModel->setRecord(curRecNo,curRec);
+
+    return curIndex.row();
+}
+
 bool IDatabase::searchPatient(QString filter)
 {
     patientTabModel->setFilter(filter);
@@ -43,11 +59,13 @@ bool IDatabase::deleteCurrentPatien()
     patientTabModel->select();
 }
 
+//提交
 bool IDatabase::submitPatientEdit()
 {
     return patientTabModel->submitAll();
 }
 
+//撤销
 void IDatabase::revertPatientEdit()
 {
     patientTabModel->revertAll();

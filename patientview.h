@@ -25,7 +25,7 @@ private slots:
     void on_btEdit_clicked();
 
 signals:
-    void goPatienEditView();
+    void goPatienEditView(int);
 
 private:
     Ui::PatientView *ui;

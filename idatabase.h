@@ -30,7 +30,7 @@ signals:
 
 public:
     bool initPatientModel();
-
+    int addNewPatient();
     bool searchPatient(QString filter);
     bool deleteCurrentPatien();
     bool submitPatientEdit();

@@ -10,7 +10,6 @@
 #include "patientview.h"
 #include "welcomeview.h"
 
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MasterView;
@@ -30,7 +29,7 @@ public slots:
     void goWelcomeView();
     void goDoctorView();
     void goDepartmentView();
-    void goPatientEditView();
+    void goPatientEditView(int rowNo);
     void goPatientView();
     void goPreviousView();
 
